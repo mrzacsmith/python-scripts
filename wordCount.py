@@ -16,14 +16,15 @@ def main():
 
 
     for line in lines:
+
         # ensure all words are the same case, and strip out extra space between lines
-        line = line.lower()
-        line = line.strip()
+        # line = line.lower()
+        line = line.strip().lower()
         # print(line)
 
-        if line.find("yes") != -1:
+        if line.find("yes") != -1 and len(line) == 3: # limit the character length to match the word length
             countYes += 1
-        if line.find("no") != -1:
+        if line.find("no") != -1 and len(line) == 2:
             countNo += 1
 
     # display results
