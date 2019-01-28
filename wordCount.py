@@ -16,6 +16,7 @@ def main():
 
 
     for line in lines:
+        # ensure all words are the same case, and strip out extra space between lines
         line = line.lower()
         line = line.strip()
         # print(line)
